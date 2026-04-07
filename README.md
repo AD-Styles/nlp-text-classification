@@ -1,4 +1,4 @@
-# 🤖 Text Embedding-Based Binary & Multi-Class Classification Pipeline
+# 🔍 Text Embedding-Based Binary & Multi-Class Classification Pipeline
 **텍스트 임베딩 기반 이진/다중 문장 분류 파이프라인 구축 (영화 리뷰 & 국민청원)**
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
