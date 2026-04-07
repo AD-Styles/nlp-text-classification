@@ -1,34 +1,36 @@
-# 🤖 텍스트 임베딩 기반 이진/다중 문장 분류 파이프라인 구축 (영화 리뷰 & 국민청원)
-*Text Embedding-Based Binary & Multi-Class Classification Pipeline*
+# 🤖 Text Embedding-Based Binary & Multi-Class Classification Pipeline
+*텍스트 임베딩 기반 이진/다중 문장 분류 파이프라인 구축 (영화 리뷰 & 국민청원)*
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.6.1-orange.svg)
 ![Sentence-Transformers](https://img.shields.io/badge/Sentence--Transformers-5.3.0-yellow.svg)
 
 ## 📌 프로젝트 요약 (Project Overview)
-Sentence-Transformers와 머신러닝(Logistic Regression)을 활용하여 자연어의 의미를 파악하고 자동으로 분류하는 NLP 프로젝트입니다. 
-1. **[이진 분류]** 영화 리뷰 데이터를 활용하여 텍스트의 긍정/부정 감성을 판별하는 기초 파이프라인을 설계했습니다.
-2. **[다중 분류]** 동일한 임베딩 구조를 확장하여, 국민청원 데이터를 17개의 복잡한 사회적 카테고리로 세분화하는 심화 모델을 구축하고 데이터 불균형 문제를 분석했습니다.
+Sentence-Transformers와 머신러닝(Logistic Regression)을 활용하여 자연어의 의미를 파악하고 자동으로 분류하는 NLP 프로젝트. 
+1. **[이진 분류]** 영화 리뷰 데이터를 활용하여 텍스트의 긍정/부정 감성을 판별하는 기초 파이프라인을 설계.
+2. **[다중 분류]** 동일한 임베딩 구조를 확장하여, 국민청원 데이터를 17개의 복잡한 사회적 카테고리로 세분화하는 심화 모델을 구축하고 데이터 불균형 문제를 분석.
 
 ## 🎯 핵심 목표 (Motivation)
 | 구분 | 세부 내용 |
 | :--- | :--- |
-| **분류 모델의 확장** | 단순한 이진 분류(감성 분석)에서 시작하여 복잡한 다중 분류(카테고리 예측)로 기술을 점진적으로 확장 적용합니다. |
-| **자연어 처리(NLP) 기초 구현** | 텍스트 데이터를 컴퓨터가 연산할 수 있는 다차원 벡터로 변환하는 임베딩 과정을 코드로 구현합니다. |
-| **데이터 불균형 분석** | 17개 카테고리로 구성된 현실 데이터(국민청원)의 불균형이 모델 성능에 미치는 영향을 확인합니다. |
+| **분류 모델의 확장** | 단순한 이진 분류(감성 분석)에서 시작하여 복잡한 다중 분류(카테고리 예측)로 기술을 점진적으로 확장. |
+| **자연어 처리(NLP) 기초 구현** | 텍스트 데이터를 컴퓨터가 연산할 수 있는 다차원 벡터로 변환하는 임베딩 과정을 코드로 구현. |
+| **데이터 불균형 분석** | 17개 카테고리로 구성된 현실 데이터(국민청원)의 불균형이 모델 성능에 미치는 영향을 확인. |
 
 ## 🚨 개념 설명 및 파이프라인 (Concept & Pipeline)
 | 항목 | 세부 내용 |
 | :--- | :--- |
-| **핵심 개념 (임베딩)** | 자연어 텍스트의 의미를 다차원 공간의 좌표(벡터)로 변환하는 기술입니다. 문장의 의미가 비슷할수록 벡터 공간에서 가까운 위치에 매핑됩니다. |
+| **핵심 개념 (임베딩)** | 자연어 텍스트의 의미를 다차원 공간의 좌표(벡터)로 변환하는 기술. 문장의 의미가 비슷할수록 벡터 공간에서 가까운 위치에 매핑됨. |
 | **사용된 알고리즘** | `paraphrase-multilingual-MiniLM-L12-v2` 모델 (텍스트 임베딩) <br> `LogisticRegression` (분류기) |
 | **학습 파이프라인** | 1. 텍스트 데이터 정제 및 라벨 인코딩 <br> 2. 임베딩 모델을 통한 텍스트 벡터화 (`model.encode`) <br> 3. 로지스틱 회귀 모델 학습 (`clf.fit`) <br> 4. 성능 검증 및 새로운 문장 테스트 |
 
 ## 1. 프로젝트 구조 (Repository Structure)
 ```text
-📁 NLP-Text-Classification-Portfolio
+📁 nlp-text-classification
+├── 📄 .gitignore
 ├── 📄 01_영화_리뷰_감성_분석기.py
 ├── 📄 02_국민청원_카테고리_분류기.py
+├── 📄 LICENSE
 └── 📄 README.md
 ```
 
