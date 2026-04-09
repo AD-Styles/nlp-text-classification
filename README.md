@@ -1,5 +1,5 @@
 # 🔍 Text Embedding-Based Binary & Multi-Class Classification Pipeline
-**텍스트 임베딩 기반 이진/다중 문장 분류 파이프라인 구축 (영화 리뷰 & 국민청원)**
+**텍스트 임베딩 기반 이진/다중 문장 분류 파이프라인 구축 (영화 리뷰 감성 분석 & 국민청원 카테고리 분류기)**
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.6.1-orange.svg)
